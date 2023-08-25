@@ -1,0 +1,6 @@
+#lang eopl
+
+(define (plus x y)
+  (if (isZero? x)
+      y
+      (succ (plus (pred x) y))))

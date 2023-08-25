@@ -1,0 +1,5 @@
+#lang eopl
+
+;;  --> env
+;; Purpose: Construct the empty env
+(define (empty-env) '())

@@ -1,0 +1,18 @@
+#lang eopl
+(require rackunit)
+
+#|
+lon ::= ()
+    ::= (number lon)
+|#
+
+;; (listof Any) --> Boolean
+;; Purpose: Determine if the given list is a lon
+(define (lon? l)
+  (if (null? l)
+      #t
+      (and (number? (car l)) (lon? (cdr l)))))
+
+(check-equal? (lon? '(a b c d)) #f)
+(check-equal? (lon? '()) #t)
+(check-equal? (lon? '(1 2 3)) #t)

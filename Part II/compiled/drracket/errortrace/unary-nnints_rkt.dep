@@ -1,0 +1,1 @@
+("8.4" ta6nt ("875385e3eed1ed856a38bee569280fdc4d8cdc61" . "3ce64bfe3de7c8e037126263e88fe362d772f53b") #"C:\\Users\\morazanm\\OneDrive - Seton Hall University\\Documents\\Courses\\CS3113\\EOPL 3ed\\CLASS CODE F23 and afterwards\\Part II\\..\\eopl-extras.rkt" (collects #"eopl" #"lang" #"reader.rkt") (collects #"eopl" #"main.rkt") (collects #"errortrace" #"errortrace-key.rkt"))

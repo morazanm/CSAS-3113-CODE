@@ -1,0 +1,29 @@
+#lang eopl
+(require "../eopl-extras.rkt")
+
+(provide zero isZero? succ pred dec2nnint nnint2dec)
+
+#|
+
+A nnint is either
+  1. '()
+  2. (cons #t nnint)
+
+|#
+
+; Constructors
+(define (zero) '())
+
+(define (dec2nnint n)
+  (build-list n (lambda (i) #t)))
+
+(define (succ n) (cons #t n))
+
+; Observers
+(define (isZero? n) (null? n))
+
+(define pred cdr)
+
+(define (nnint2dec n) (length n))
+
+

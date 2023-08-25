@@ -1,0 +1,14 @@
+#lang eopl
+(require rackunit)
+
+;; (listof Any) natnum --> Any
+;; Purpose: Extract the nth element of the given list
+(define (nthelem l n)
+  (if (null? l)
+      (eopl:error 'nthelem "List too short by ~s elems" (+ n 1))
+      (if (zero? n)
+          (car l)
+          (nthelem (cdr l) (- n 1)))))
+
+(check-equal? (nthelem '(0 1 2 3) 3) 3)
+(check-equal? (nthelem '(a b c d e f g h) 5) 'f)

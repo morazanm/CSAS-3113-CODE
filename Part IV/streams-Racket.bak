@@ -1,0 +1,25 @@
+#lang racket
+
+(define (ints-from n) (stream-cons n (ints-from (+ n 1))))
+
+(define natnums (ints-from 0))
+
+(define (nth-natnum n) (stream-ref natnums n))
+
+(define (first-n-natnums n)
+  (if (= n 0)
+      (list (nth-natnum 0))
+      (cons (nth-natnum n) (first-n-natnums (- n 1)))))
+
+(define (fib k)
+  (if (< k 2)
+      1
+      (+ (fib (- k 1)) (fib (- k 2)))))
+
+(define (the-fibs n) (stream-cons (fib n) (the-fibs (+ n 1))))
+
+(define fibs (the-fibs 0))
+
+(define (nth-fib n) (stream-ref fibs n))
+
+(define the-doubles (stream-map (λ (n) (* 2 n)) natnums))
