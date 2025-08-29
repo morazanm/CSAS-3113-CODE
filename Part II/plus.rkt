@@ -1,7 +1,7 @@
 #lang eopl
 
-(require rackunit "unary-nnints.rkt")
-;(require rackunit "racketnums-nnint.rkt")
+;(require rackunit "unary-nnints.rkt")
+(require rackunit "racketnums-nnint.rkt")
 
 
 ;; nnint nnint --> nnint
